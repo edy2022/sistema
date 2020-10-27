@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+*//  listar los $productos *//
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <?php
+
+    require_once "model/data.php";
+    $d = new Data();
+
+
+    $productos = $d ->getProductos();
+
+
+    foreach ($productos as $p ) {
+    echo $p->id."-".$p->nombre."-". $p->precio."-".$p->stock;
+
+      echo "<br>";
+
+
+    }
+
+    echo $p->id;
+    echo "<br>";
+    echo $p->nombre;
+    echo "<br>";
+    echo $p->precio;
+    echo "<br>";
+    echo $p->stock;
+    echo "<br>";
+    echo $cant;
+
+
+
+
+     ?>
+
+
+  </body>
+</html>
